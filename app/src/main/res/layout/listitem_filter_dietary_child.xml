@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_10ssp"
+            android:layout_toLeftOf="@+id/checkbox"
+            android:textAppearance="@style/MyCustomTextStyle.Regular"
+            android:textColor="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/MyCustomTextStyle.Regular"
+            android:layout_alignParentRight="true"
+            app:buttonTint="@color/colorPrimary"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

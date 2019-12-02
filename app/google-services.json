@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1044585756056",
+    "firebase_url": "https://magicapp-c59c3.firebaseio.com",
+    "project_id": "magicapp-c59c3",
+    "storage_bucket": "magicapp-c59c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044585756056:android:61788d8a7a734d8a",
+        "android_client_info": {
+          "package_name": "com.android42works.magicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044585756056-q49844mmhqupludt55j8fd2vr4ge7bqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHhLugDJJeojQck4loQFcLsxOP93Fm4Qk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

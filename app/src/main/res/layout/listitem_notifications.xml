@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llDetail"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_order"
+                android:text="Order #"
+                android:textSize="@dimen/_12ssp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:textColor="@color/colorGreyHeading"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/colorGreyHeading"
+                android:textAppearance="@style/MyCustomTextStyle.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_watch"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_clock_grey"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/txt_datentime"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_divider"
+            android:background="@color/colorGreyLight"
+            android:layout_below="@+id/llDetail"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_timer"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_primary_halfround_left"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/ic_clock_white"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

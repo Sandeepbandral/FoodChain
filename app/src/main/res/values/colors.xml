@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#00704a</color>
+    <color name="colorPrimaryDark">#025c3e</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlueFB">#386BAE</color>
+    <color name="colorActivityBackground">#F2F2F2</color>
+    <color name="colorGrey">#494949</color>
+    <color name="colorGreyHint">#A0A0A0</color>
+    <color name="colorGreyHeading">#494949</color>
+    <color name="colorGreyDishTitle">#494949</color>
+    <color name="colorGreyDishPrice">#FF7353</color>
+    <color name="colorGreyDishDeliveryTime">#969595</color>
+    <color name="colorGreyBottomNavigation">#A5A5A5</color>
+    <color name="colorGreyLight">#DCDCDC</color>
+    <color name="colorStatusRed">#FF0000</color>
+    <color name="colorStatusGreen">#4cae50</color>
+    <color name="colorGreenRateTag">#5a9651</color>
+    <color name="colorOrange">#FF7353</color>
+    <color name="colorButton">#FF7353</color>
+
+</resources>

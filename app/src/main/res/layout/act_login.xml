@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ic_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main View -->
+
+    <ScrollView
+        android:layout_above="@+id/rl_skip"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Logo View -->
+
+            <ImageView
+                android:src="@drawable/ic_logo_green"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"/>
+
+            <!-- Login Box View -->
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_primary_round"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:padding="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Email View -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:hint="@string/email_address"
+                        android:textColorHint="@color/colorWhite"
+                        android:textColor="@color/colorWhite"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/_35sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:background="@color/colorPrimary"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_email"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+                <!-- Password View -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_pass"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@+id/rl_email"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edt_pass"
+                        android:hint="@string/password"
+                        android:textColorHint="@color/colorWhite"
+                        android:textColor="@color/colorWhite"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/_35sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:background="@color/colorPrimary"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_password"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+                <!-- ForgotPass View -->
+
+                <TextView
+                    android:id="@+id/txt_forgotpass"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:layout_below="@+id/rl_pass"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Login Button View -->
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:text="@string/login"
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_below="@+id/txt_forgotpass"
+                    android:background="@drawable/bg_white_round_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_34sdp" />
+
+            </RelativeLayout>
+
+            <!-- FB Login View -->
+
+            <LinearLayout
+                android:id="@+id/btn_fb_login"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_45sdp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/txt_forgotpass"
+                android:background="@drawable/bg_bluefb_round_complete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp" >
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_facebook"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_10sdp" />
+
+                <TextView
+                    android:text="@string/continue_with_facebook"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- Or View -->
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/txt_or"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/txt_or"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <TextView
+                    android:id="@+id/txt_or"
+                    android:text="OR"
+                    android:background="@null"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:textColor="@color/colorGreyHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <!-- Register View -->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Don't have an account?"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:textColor="@color/colorGreyHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_register"
+                    android:text="Register"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Skip Login View -->
+
+    <RelativeLayout
+        android:id="@+id/rl_skip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_skip_login"
+            android:text="@string/skip_login"
+            android:background="@drawable/bg_darkgrey_underline"
+            android:textSize="@dimen/_11ssp"
+            android:layout_centerInParent="true"
+            android:textAppearance="@style/MyCustomTextStyle.Light"
+            android:textColor="@color/colorGreyHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        android:visibility="gone"
+        layout="@layout/sublayout_actionbar_backarrow_trans"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>

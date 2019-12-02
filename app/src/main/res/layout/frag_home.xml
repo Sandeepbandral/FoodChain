@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Tabs View -->
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/mTabLayout"
+                style="@style/customTabLayout"
+                android:visibility="gone"
+                android:background="@color/colorWhite"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"/>
+
+        <!-- Halls View -->
+
+            <LinearLayout
+                android:id="@+id/ll_halls"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp">
+
+                    <TextView
+                        android:text="Halls"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:background="@drawable/bg_white_brdr_pri_round_complete"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp">
+
+                        <Spinner
+                            android:id="@+id/spinner_hall"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:overlapAnchor="false"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:layout_marginBottom="@dimen/_1sdp"
+                            android:background="@color/colorWhite"
+                            android:layout_toLeftOf="@+id/rl_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_spinner"
+                            android:background="@drawable/bg_primary_halfround"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:padding="@dimen/_8sdp"
+                                app:srcCompat="@drawable/ic_arrow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_hall_status"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="Hall is closed."
+                    android:visibility="gone"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/colorStatusRed"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:background="#E4E4E4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        <!-- Pager View -->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mViewPager"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!-- No Internet View -->
+
+    <include
+        android:id="@+id/view_nointernet"
+        android:visibility="gone"
+        layout="@layout/sublayout_nointernet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

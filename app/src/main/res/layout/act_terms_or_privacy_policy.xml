@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/sublayout_actionbar_backarrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <!-- Main View -->
+
+    <WebView
+        android:id="@+id/mWebview"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- No Internet View -->
+
+    <include
+        android:id="@+id/view_nointernet"
+        android:visibility="gone"
+        layout="@layout/sublayout_nointernet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

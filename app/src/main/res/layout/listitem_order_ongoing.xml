@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_order"
+                android:text="Order :"
+                android:textSize="@dimen/_10ssp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/colorGreyHeading"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_hall"
+                android:text="Hall 1"
+                android:textSize="@dimen/_10ssp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textColor="@color/colorGreyDishDeliveryTime"
+                android:textAppearance="@style/MyCustomTextStyle.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/colorGreyLight"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:text="Key lime pie"
+                android:textSize="@dimen/_10ssp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/colorGreyHeading"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_7sdp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:text="Price: "
+                    android:textSize="@dimen/_10ssp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:background="@color/colorGreyDishDeliveryTime"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/txt_pickup_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Pickup Time: "
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:text="Jan 1, 2018, 00:00AM"
+                    android:textSize="@dimen/_10ssp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/colorGreyDishDeliveryTime"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_7sdp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Order status: "
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAppearance="@style/MyCustomTextStyle.Regular"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:singleLine="false"
+                android:visibility="gone"
+                android:text="Order pending for cancellation"
+                android:textColor="@color/colorStatusRed"
+                android:textSize="@dimen/_10ssp"
+                android:textAppearance="@style/MyCustomTextStyle.Bold.Italic" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_status"
+                android:text="View order status"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_primary_round_complete"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_30sdp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_toRightOf="@+id/btn_status"
+                android:text="Cancel Order"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_grey_round_complete"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_30sdp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

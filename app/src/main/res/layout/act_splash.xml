@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/ic_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main View -->
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Logo View -->
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_logo_green"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_120sdp"/>
+
+        <!-- Logo with Name View -->
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/bg_magic"
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

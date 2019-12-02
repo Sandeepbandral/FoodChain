@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar_parent"
+        android:background="@color/colorPrimary"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <TextView
+            android:id="@+id/txt_actionbar_title"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MyCustomTextStyle.Bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/img_actionbar_logo"
+            android:src="@drawable/ic_logo_white"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_45sdp" />
+
+        <ImageView
+            android:id="@+id/img_actionbar_filter"
+            app:srcCompat="@drawable/ic_filter"
+            android:padding="@dimen/_14sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp" />
+
+        <ImageView
+            android:id="@+id/img_actionbar_trash"
+            app:srcCompat="@drawable/ic_delete"
+            android:padding="@dimen/_13sdp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_actionbar_search"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_toLeftOf="@+id/img_actionbar_filter"
+            android:layout_toRightOf="@+id/img_actionbar_logo"
+            android:background="@drawable/bg_primarydark_round_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/edt_actionbar_search"
+                android:hint="@string/type_your_search_here"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:singleLine="true"
+                android:text=""
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/_minus5sdp"
+                android:layout_toRightOf="@+id/img_actionbar_search"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_11ssp"
+                android:textAppearance="@style/MyCustomTextStyle.Light"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/img_actionbar_search"
+                app:srcCompat="@drawable/ic_search"
+                android:padding="@dimen/_9sdp"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

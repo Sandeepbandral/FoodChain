@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/sublayout_actionbar_backarrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <!-- Main Data View -->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_margin="@dimen/_5sdp"
+        android:id="@+id/recycler_orders"
+        android:layout_below="@+id/actionbar"
+        android:layout_above="@+id/view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- No Data View -->
+
+    <include
+        android:id="@+id/view_nodata"
+        android:visibility="gone"
+        android:layout_below="@+id/actionbar"
+        layout="@layout/sub_layout_empty_fav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Bottom Cart View -->
+
+    <include
+        android:id="@+id/view_cart"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        layout="@layout/sublayout_cart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"/>
+
+    <!-- No Internet View -->
+
+    <include
+        android:id="@+id/view_nointernet"
+        android:visibility="gone"
+        android:layout_below="@+id/actionbar"
+        layout="@layout/sublayout_nointernet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

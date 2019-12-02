@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:background="@null"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_see_all"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp">
+
+        <TextView
+            android:text="See All"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_12ssp"
+            android:textAppearance="@style/MyCustomTextStyle.Regular"
+            android:textColor="@color/colorGreyHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_150sdp">
+
+        <!-- Dish Image View -->
+
+        <RelativeLayout
+            android:id="@+id/rl_dish"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_bg_bestseller"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_23sdp"/>
+
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_dish"
+                    android:background="@color/colorWhite"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progress_load"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    app:indicatorName="BallSpinFadeLoaderIndicator"
+                    app:indicatorColor="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_best_seller"
+                android:background="@drawable/ic_sale"
+                android:text="BEST SELLER"
+                android:visibility="visible"
+                android:gravity="center"
+                android:textSize="@dimen/_7ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:textAppearance="@style/MyCustomTextStyle.Regular"
+                android:textColor="@color/colorWhite"
+                android:layout_width="@dimen/_58sdp"
+                android:layout_height="@dimen/_18sdp" />
+
+        </RelativeLayout>
+
+        <!-- Dish View -->
+
+        <LinearLayout
+            android:layout_above="@+id/rl_cost"
+            android:layout_below="@+id/rl_dish"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Details View -->
+
+            <LinearLayout
+                android:id="@+id/ll_dish_details"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_veg_nonveg"
+                        app:srcCompat="@drawable/ic_veg"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp" />
+
+                    <TextView
+                        android:text=""
+                        android:id="@+id/txt_name"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_12ssp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp" />
+
+                </LinearLayout>
+
+                <!-- Calories View -->
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Calories: "
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txt_calorie"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:textColor="@color/colorGreyHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- Allergies View -->
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_option_label"
+                        android:text=""
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txt_option"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:textColor="@color/colorGreyHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Desc View -->
+
+            <LinearLayout
+                android:id="@+id/ll_desc"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_divider_desc"
+                    android:background="@color/colorGreyHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- Description View -->
+
+                <TextView
+                    android:id="@+id/txt_desc"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:text=""
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_10ssp"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:textColor="@color/colorGreyHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Cost View -->
+
+        <RelativeLayout
+            android:id="@+id/rl_cost"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:background="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/colorGreyHint"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <TextView
+                android:id="@+id/txt_cost"
+                android:text=""
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/img_favourite"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"
+                android:textAppearance="@style/MyCustomTextStyle.Regular"
+                android:textColor="@color/colorGreyHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/img_favourite"
+                android:layout_alignParentRight="true"
+                android:paddingTop="@dimen/_6sdp"
+                android:scaleType="fitEnd"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                app:srcCompat="@drawable/ic_heart_empty"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_24sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

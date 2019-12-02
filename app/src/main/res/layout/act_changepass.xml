@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/sublayout_actionbar_backarrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Main View -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp">
+
+                <!-- Name View -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/txt_current_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CURRENT PASSWORD"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <EditText
+                        android:id="@+id/edt_current"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_current_label"
+                        android:background="@color/colorWhite"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/imgHideCurrent"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_gone" />
+
+                    <ImageView
+                        android:id="@+id/imgShowCurrent"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight" />
+
+                <!-- Mobile View -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_newpass_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NEW PASSWORD"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <EditText
+                        android:id="@+id/edt_newpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_newpass_label"
+                        android:background="@color/colorWhite"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/imgHideNew"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_gone" />
+
+                    <ImageView
+                        android:id="@+id/imgShowNew"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight" />
+
+                <!-- Email View -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_confirmpass_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CONFIRM NEW PASSWORD"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <EditText
+                        android:id="@+id/edt_confirmpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_confirmpass_label"
+                        android:background="@color/colorWhite"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ImageView
+                        android:id="@+id/imgHideConfirm"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_gone" />
+
+                    <ImageView
+                        android:id="@+id/imgShowConfirm"
+                        android:layout_width="@dimen/_14ssp"
+                        android:layout_height="@dimen/_14ssp"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_pswd_visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight" />
+
+
+            </LinearLayout>
+
+            <!-- Save Changes View -->
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/txt_forgotpass"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_primary_round_complete"
+                android:text="Save Changes"
+                android:textAllCaps="false"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

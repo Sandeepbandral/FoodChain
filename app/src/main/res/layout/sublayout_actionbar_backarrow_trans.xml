@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar_parent"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/img_actionbar_backarrow"
+            app:srcCompat="@drawable/ic_arrow_primary"
+            android:paddingTop="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_14sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:rotation="90"
+            android:paddingRight="@dimen/_7sdp"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_45sdp" />
+
+        <TextView
+            android:id="@+id/txt_actionbar_title"
+            android:text=""
+            android:textSize="@dimen/_14ssp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/MyCustomTextStyle.Regular"
+            android:layout_toRightOf="@+id/img_actionbar_backarrow"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

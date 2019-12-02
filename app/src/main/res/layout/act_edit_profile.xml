@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/sublayout_actionbar_backarrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <!-- Main View -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Name View -->
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_name_label"
+                        android:text="NAME"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_below="@+id/txt_name_label"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textColor="@color/colorGreyHeading"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:imeOptions="actionNext"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:background="@color/colorWhite"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- Mobile View -->
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_mobile_label"
+                        android:text="MOBILE"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/edt_mobile"
+                        android:layout_below="@+id/txt_mobile_label"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textColor="@color/colorGreyHeading"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:background="@color/colorWhite"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- Email View -->
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_email_label"
+                        android:text="EMAIL ADDRESS"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txt_email"
+                        android:layout_below="@+id/txt_email_label"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textColor="@color/colorGreyHint"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:background="@color/colorWhite"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- Student Id  View -->
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_student_label"
+                        android:text="STUDENT ID"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/edt_student"
+                        android:layout_below="@+id/txt_student_label"
+                        android:textColorHint="@color/colorGreyHint"
+                        android:textColor="@color/colorGreyHeading"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:imeOptions="actionDone"
+                        android:paddingRight="@dimen/_35sdp"
+                        android:background="@color/colorWhite"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+            </LinearLayout>
+
+            <!-- Save Changes View -->
+
+            <Button
+                android:id="@+id/btn_save"
+                android:text="Save Changes"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/txt_forgotpass"
+                android:background="@drawable/bg_primary_round_complete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

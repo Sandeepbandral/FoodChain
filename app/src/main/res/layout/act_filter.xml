@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Filter View -->
+
+    <RelativeLayout
+        android:id="@+id/rl_filter"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_285sdp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_white_round"
+            android:clickable="true">
+
+            <!-- Main View -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_filter_apply"
+                android:orientation="vertical">
+
+                <!-- Header View -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_filter_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:text="RESET"
+                        android:textAppearance="@style/MyCustomTextStyle.Regular"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <ImageView
+                        android:id="@+id/img_filter_exit"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_cross_grey" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorActivityBackground" />
+
+                <!-- Tab View -->
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tablayout_filter"
+                    style="@style/customTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorActivityBackground" />
+
+                <!-- ViewPager View -->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <!-- Apply Button View -->
+
+            <Button
+                android:id="@+id/btn_filter_apply"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/txt_forgotpass"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/bg_primary_round_complete"
+                android:text="APPLY"
+                android:textAllCaps="false"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+# Referenced at /Users/sandy_singh/Desktop/magicapp_user/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:27
+-keep class android.support.multidex.MultiDexApplication { <init>(...); }

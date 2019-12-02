@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout
+        android:id="@+id/swipyrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:srl_direction="top">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+    <!-- No Data View -->
+
+    <include
+        android:id="@+id/view_nodata"
+        layout="@layout/sub_layout_empty_noti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Login View -->
+
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_login_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/login_profile"
+                android:textAppearance="@style/MyCustomTextStyle.Regular"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:srcCompat="@drawable/ic_lock" />
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/bg_primary_round_complete"
+                android:gravity="center"
+                android:text="Login"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <!-- Or View -->
+
+        <RelativeLayout
+            android:id="@+id/rlOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llLogin"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/txt_or"
+                android:background="@color/colorGreyLight" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/txt_or"
+                android:background="@color/colorGreyLight" />
+
+            <TextView
+                android:id="@+id/txt_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:text="OR"
+                android:textAppearance="@style/MyCustomTextStyle.Light"
+                android:textColor="@color/colorGreyHeading"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+
+        <!-- Register View -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlOR"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:textAppearance="@style/MyCustomTextStyle.Light"
+                android:textColor="@color/colorGreyHeading"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txt_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text="Register"
+                android:textAppearance="@style/MyCustomTextStyle.Bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- No Internet View -->
+
+    <include
+        android:id="@+id/view_nointernet"
+        android:visibility="gone"
+        layout="@layout/sublayout_nointernet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

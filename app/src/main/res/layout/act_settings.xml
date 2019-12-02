@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ActionBar View -->
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/sublayout_actionbar_backarrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <!-- Main View -->
+
+
+        <RelativeLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_options"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Contact Support View -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_contact_support"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_support"
+                        app:srcCompat="@drawable/ic_support"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/img_support"
+                        android:text="Contact Support"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_arrow_grey"
+                        android:rotation="-90"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- Language View -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_laguage"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_language"
+                        app:srcCompat="@drawable/ic_language"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/img_language"
+                        android:text="Language"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_arrow_grey"
+                        android:rotation="-90"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_changepass"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_changepass"
+                        android:background="@drawable/ic_password_grey"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/img_changepass"
+                        android:text="Change Password"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_arrow_grey"
+                        android:rotation="-90"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_divider_pass"
+                    android:background="@color/colorGreyLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <!-- About us View -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_about_us"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_about_us"
+                        app:srcCompat="@drawable/ic_privacy_policy"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/img_about_us"
+                        android:text="About"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorGreyHeading"
+                        android:textAppearance="@style/MyCustomTextStyle.Light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        app:srcCompat="@drawable/ic_arrow_grey"
+                        android:rotation="-90"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+                <!-- About us View -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/ll_options"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Got something to share with us?"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textAppearance="@style/MyCustomTextStyle.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Be its bug you found or an area you want us to serve, shoot us an email and we will try our best."
+                    android:textSize="@dimen/_10ssp"
+                    android:id="@+id/txtEmail"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorGreyHeading"
+                    android:textAppearance="@style/MyCustomTextStyle.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/colorActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- No Data View -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_25sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_nointernet"
+            android:src="@drawable/ic_nointernet"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp" />
+
+        <TextView
+            android:text="There is no internet to browse"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorGreyHeading"
+            android:textAppearance="@style/MyCustomTextStyle.Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Seems like you are offline. Please check your internet settings."
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorGreyHint"
+            android:textAppearance="@style/MyCustomTextStyle.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_tryagain"
+            android:textSize="@dimen/_10ssp"
+            android:text="Try Again"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:background="@drawable/bg_primary_round_complete"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/MyCustomTextStyle.Bold"
+            android:layout_marginTop="@dimen/_55sdp"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>
